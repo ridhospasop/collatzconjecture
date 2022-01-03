@@ -1,0 +1,15 @@
+function Collatz(n){
+    while (n > 1) { // We don't give break function because it was proven until 5,76 x 10 (18)
+        if (n % 2 == 0) {
+            n = n/2;
+        }
+        else {
+            n = 3*n+1;
+        }
+    }
+    return n;
+}
+
+// Test number. Just change number in n
+let n = 80;
+console.log(Collatz(n));
